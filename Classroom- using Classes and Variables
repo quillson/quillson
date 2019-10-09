@@ -1,0 +1,26 @@
+public class classroom {
+
+int boy;
+int girl;
+boolean tranfers;
+
+public classroom(int numberGirls, int numberBoys, boolean newTranfers){
+girl = numberGirls;
+boy = numberBoys;
+tranfers = newTranfers;
+}
+
+public static void main(String[] args){
+classroom lastYear = new classroom(10, 14, false);
+classroom thisYear = new classroom(15, 19, true);
+
+
+int totalStudents = thisYear.boy + thisYear.girl;
+int totalOldStudents = lastYear.boy + lastYear.girl;
+int totalNewStudents = totalStudents - totalOldStudents;
+
+System.out.println("There are " + totalStudents + " students this year! That's " + totalNewStudents + " more students than last year!");
+System.out.println("It's " + thisYear.tranfers + " that we had tranfers this year.");
+
+   }
+}
